@@ -6,6 +6,12 @@ import NotFound from "../components/NotFound.vue";
 import AddCustomer from "../components/customers/AddCustomer.vue";
 import ShowCustomer from "../components/customers/ShowCustomer.vue";
 import EditCustomer from "../components/customers/EditCustomer.vue";
+import AddOrder from "../components/orders/AddOrder.vue";
+import ShowOrder from "../components/orders/ShowOrder.vue";
+import EditOrder from "../components/orders/EditOrder.vue";
+import EditProduct from "../components/product/EditProduct.vue";
+import ShowProduct from "../components/product/ShowProduct.vue";
+import AddProdact from "../components/product/AddProdact.vue";
 
 const routes = [
   {
@@ -35,9 +41,40 @@ const routes = [
     component: Order,
   },
   {
+    path: "/add-order",
+    name: "add-order",
+    component: AddOrder,
+  },
+  {
+    path: "/show-order/:id",
+    name: "show-order",
+    component: ShowOrder,
+  },
+  {
+    path: "/edit-order/:id",
+    name: "edit-order",
+    component: EditOrder,
+  },
+
+  {
     path: "/product",
     name: "product",
     component: Product,
+  },
+  {
+    path: "/add-product",
+    name: "add-product",
+    component: AddProdact,
+  },
+  {
+    path: "/show-product/:id",
+    name: "show-product",
+    component: ShowProduct,
+  },
+  {
+    path: "/edit-product/:id",
+    name: "edit-product",
+    component: EditProduct,
   },
 
   { path: "/:pathMatch(.*)*", component: NotFound },
