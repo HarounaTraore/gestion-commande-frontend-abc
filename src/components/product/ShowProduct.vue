@@ -67,7 +67,7 @@ onMounted(() => {
                   type="text"
                   value=""
                   disabled
-                /><label for="#" class="mt-2 mb-1">STock Quantity</label>
+                /><label for="#" class="mt-2 mb-1">Stock Quantity</label>
                 <input
                   class="form-control p-2"
                   type="number"

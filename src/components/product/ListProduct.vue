@@ -47,10 +47,10 @@ const destroy = (index) => {
       <table class="table table-striped table-bordered m-auto">
         <thead>
           <tr>
-            <th scope="col" class="text-center">product Name</th>
+            <th scope="col" class="text-center">Product Name</th>
             <th scope="col" class="text-center">Description</th>
             <th scope="col" class="text-center">Price</th>
-            <th scope="col" class="text-center">Stock</th>
+            <th scope="col" class="text-center">Stock Quantity</th>
             <th scope="col" class="text-center">Category</th>
             <th scope="col" class="text-center">Barcode</th>
             <th scope="col" class="text-center">Status</th>

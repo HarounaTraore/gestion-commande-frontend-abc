@@ -28,7 +28,7 @@ const destroy = (index) => {
 <template>
   <div class="container-fluid">
     <div class="container">
-      <h1 class="mt-3 mb-2 text-center fw-bold">List of Customer</h1>
+      <h1 class="mt-3 mb-2 text-center fw-bold">List of Customers</h1>
       <div class="container-btn d-flex justify-content-end">
         <button
           class="btn btn-primary mb-3"

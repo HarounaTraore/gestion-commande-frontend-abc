@@ -36,10 +36,10 @@ function deleteDetailsEntred(index) {
   <div
     class="d-flex mt-2 flex-column justify-content-center align-items-center"
   >
-    <h1>Edit Order and its Details</h1>
+    <h1>Edit Order</h1>
     <div class="container-fluid d-flex justify-content-end mt-3">
       <button class="btn btn-secondary" @click="router.push({ name: 'order' })">
-        Return to Home
+        Order List
       </button>
       <button
         class="btn btn-primary ms-3"

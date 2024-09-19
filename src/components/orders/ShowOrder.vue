@@ -6,10 +6,10 @@ import router from "../../routes/routes";
   <div
     class="d-flex mt-2 flex-column justify-content-center align-items-center"
   >
-    <h1>Show Order and this Details</h1>
+    <h1>Show Order</h1>
     <div class="container-fluid d-flex justify-content-end mt-3">
       <button class="btn btn-secondary" @click="router.push({ name: 'order' })">
-        Return to Home
+        Order List
       </button>
     </div>
     <div class="container-fluid p-0 m-0 d-flex justify-content-between">
