@@ -15,18 +15,18 @@ import router from "../../routes/routes";
     <div class="container-fluid p-0 m-0 d-flex justify-content-between">
       <div class="p-0 m-0 container-fluid">
         <label for="#" class="mt-2 mb-1">Date</label>
-        <input class="form-control p-2" type="date" />
+        <input class="form-control p-2" disabled type="date" />
         <label for="#" class="mt-2 mb-1">Customer Name</label>
-        <input class="form-control p-2" type="text" />
+        <input class="form-control p-2" disabled type="text" />
       </div>
 
       <div class="container-right container-fluid">
         <label for="#" class="mt-2 mb-1">Delivery Address</label>
-        <input class="form-control p-2" type="text" />
+        <input class="form-control p-2" type="text" disabled />
         <label for="#" class="mt-2 mb-1">Stock Track Number</label>
-        <input class="form-control p-2" type="number" />
+        <input class="form-control p-2" type="number" disabled />
         <label for="#" class="mt-2 mb-1">Order Status</label>
-        <select class="form-control p-2">
+        <select class="form-control p-2" disabled>
           <option value="Processing" selected>Processing</option>
           <option value="Shipped">Shipped</option>
           <option value="Delivered">Delivered</option>
@@ -53,11 +53,7 @@ import router from "../../routes/routes";
               </select>
             </td>
             <td>
-              <input
-                type="number"
-                class="form-control"
-                disabled
-              />
+              <input type="number" class="form-control" disabled />
             </td>
             <td>
               <input type="number" disabled class="form-control" />
@@ -72,11 +68,7 @@ import router from "../../routes/routes";
               </select>
             </td>
             <td>
-              <input
-                type="number"
-                class="form-control"
-                disabled
-              />
+              <input type="number" class="form-control" disabled />
             </td>
             <td>
               <input type="number" disabled class="form-control" />
@@ -91,11 +83,7 @@ import router from "../../routes/routes";
               </select>
             </td>
             <td>
-              <input
-                type="number"
-                class="form-control"
-                disabled
-              />
+              <input type="number" class="form-control" disabled />
             </td>
             <td>
               <input type="number" disabled class="form-control" />
