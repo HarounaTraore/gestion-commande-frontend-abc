@@ -11,7 +11,7 @@ import router from "./routes/routes.js";
           autofocus
           @click="router.push({ name: 'customer' })"
         >
-          <i class="fas fa-users"></i> Customer
+          <i class="fas fa-users"></i> Customers
         </button>
         <button
           class="btn btn-outline-light ms-2"
@@ -25,7 +25,7 @@ import router from "./routes/routes.js";
           @click="router.push({ name: 'order' })"
         >
           <i class="fa-solid fa-cart-shopping"></i>
-          Order
+          Orders
         </button>
       </div>
     </nav>
