@@ -2,13 +2,12 @@
 import { ref } from "vue";
 import router from "../../routes/routes";
 
-const details = ref([]);
+const details = ref([{}]);
 const detail = ref({
   product: "",
   price: null,
   quantity: null,
 });
-const count = ref(1);
 
 function addDetail() {
   details.value.push({ ...detail.value });
@@ -24,7 +23,7 @@ function resetDetail() {
 }
 
 function deleteDetailsEntred(index) {
-  if (details.value.length == 1) {
+  if (details.value.length === 1) {
     alert("At least one item must be present.");
   } else {
     details.value.splice(index, 1);
@@ -32,11 +31,12 @@ function deleteDetailsEntred(index) {
 }
 </script>
 
+
 <template>
   <div
     class="d-flex mt-2 flex-column justify-content-center align-items-center"
   >
-    <h1>Edit Order and this Details</h1>
+    <h1>Edit Order and its Details</h1>
     <div class="container-fluid d-flex justify-content-end mt-3">
       <button class="btn btn-secondary" @click="router.push({ name: 'order' })">
         Return to Home
@@ -48,6 +48,7 @@ function deleteDetailsEntred(index) {
         Submit
       </button>
     </div>
+
     <div class="container-fluid p-0 m-0 d-flex justify-content-between">
       <div class="p-0 m-0 container-fluid">
         <label for="#" class="mt-2 mb-1">Date</label>
@@ -81,7 +82,7 @@ function deleteDetailsEntred(index) {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(item, index) in count" :key="index">
+          <tr v-for="(item, index) in details" :key="index">
             <td>
               <select v-model="item.product" class="form-control">
                 <option value="" selected>Select Product</option>
@@ -110,12 +111,9 @@ function deleteDetailsEntred(index) {
           </tr>
         </tbody>
       </table>
-      <button class="btn btn-success mt-3" @click="addDetail, count++">
+      <button class="btn btn-success mt-3" @click="addDetail">
         Add New Detail
       </button>
     </div>
   </div>
 </template>
-
-<style>
-</style>

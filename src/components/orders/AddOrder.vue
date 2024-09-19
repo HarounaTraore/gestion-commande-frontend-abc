@@ -2,17 +2,22 @@
 import { ref } from "vue";
 import router from "../../routes/routes";
 
-const details = ref([]);
+const details = ref([{}]);
 const detail = ref({
   product: "",
   price: null,
   quantity: null,
 });
-const count = ref(1);
 
 function addDetail() {
   details.value.push({ ...detail.value });
   resetDetail();
+}
+
+function SubmitOrder() {
+  if (details.value.length < 1) {
+    alert("At least one item must be present.");
+  } else router.push({ name: "order" });
 }
 
 function resetDetail() {
@@ -29,7 +34,6 @@ function deleteDetailsEntred(index) {
   } else {
     details.value.splice(index, 1);
   }
- 
 }
 </script>
 
@@ -42,12 +46,7 @@ function deleteDetailsEntred(index) {
       <button class="btn btn-secondary" @click="router.push({ name: 'order' })">
         Return to Home
       </button>
-      <button
-        class="btn btn-primary ms-3"
-        @click="router.push({ name: 'order' })"
-      >
-        Submit
-      </button>
+      <button class="btn btn-primary ms-3" @click="SubmitOrder">Submit</button>
     </div>
     <div class="container-fluid p-0 m-0 d-flex justify-content-between">
       <div class="p-0 m-0 container-fluid">
@@ -101,7 +100,10 @@ function deleteDetailsEntred(index) {
               <input type="number" v-model="item.price" class="form-control" />
             </td>
             <td>
-              <button class="btn btn-danger" @click="deleteDetailsEntred(index)">
+              <button
+                class="btn btn-danger"
+                @click="deleteDetailsEntred(index)"
+              >
                 Remove
               </button>
             </td>
